@@ -125,17 +125,25 @@ export default function Page() {
           <Card className="p-12 md:p-16 border-2">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-4xl font-bold mb-4">Senot</h3>
-                <p className="text-lg text-accent mb-6 font-mono">XIXe siècle</p>
+                <h3 className="text-4xl font-bold mb-2">Senot</h3>
+                <p className="text-xl text-accent mb-2 font-semibold">{"l'horloger de l'industrie"}</p>
+                <p className="text-lg text-muted-foreground mb-6 font-mono">XIXe siècle</p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p className="text-pretty">
-                    {'Ingénieur mécanicien français du XIXe siècle, Senot s\'illustre par ses travaux pionniers en mécanique de précision. Ses instruments de mesure, d\'une exactitude remarquable pour l\'époque, révolutionnent le contrôle qualité dans l\'industrie naissante et permettent la fabrication de pièces rigoureusement standardisées.'}
+                    {"Au XIXe siècle, dans les ateliers français, un ingénieur nommé Senot se pose une question simple mais révolutionnaire : comment être sûr qu'une pièce mesure exactement ce qu'elle devrait mesurer ?"}
                   </p>
                   <p className="text-pretty">
-                    {'Ses contributions s\'inscrivent dans un moment charnière où la précision mécanique devient une exigence industrielle. Les outils de Senot permettent de vérifier, comparer et garantir des cotes identiques d\'une pièce à l\'autre — posant ainsi le principe de l\'interchangeabilité des composants.'}
+                    {"Imaginez l'époque : on fabrique des machines à la main, chaque artisan a son propre coup d'œil, ses propres outils approximatifs. Résultat ? Deux vis « identiques » ne le sont jamais vraiment. Impossible de remplacer une pièce cassée sans tout refabriquer sur mesure."}
                   </p>
                   <p className="text-pretty">
-                    {'Ce souci de la précision mesurable préfigure directement la logique binaire : en informatique, chaque bit doit être exact — un 0 ne peut pas être "presque" un 1. Senot, sans le savoir, a contribué à établir la culture de la rigueur absolue qui fonde toute l\'informatique moderne.'}
+                    {"Senot invente alors des instruments de mesure d'une précision inédite. Pas de « à peu près », pas de « ça devrait aller ». Ses outils disent la vérité au millimètre près. Grâce à lui, pour la première fois, on peut produire des pièces vraiment interchangeables : une roue dentée fabriquée à Paris s'emboîte parfaitement dans un mécanisme fait à Lyon."}
+                  </p>
+                  <p className="font-semibold text-foreground">{"Et l'informatique dans tout ça ?"}</p>
+                  <p className="text-pretty">
+                    {"Ce souci obsessionnel de la précision absolue, c'est exactement l'ADN de l'informatique. Un ordinateur, au fond, c'est une machine qui ne tolère aucun flou : un bit est soit 0, soit 1. Jamais « presque 1 » ou « à peu près 0 »."}
+                  </p>
+                  <p className="text-pretty">
+                    {"Sans le savoir, Senot a posé les fondations mentales de notre monde numérique : la rigueur n'est pas une option, c'est la condition pour que tout fonctionne."}
                   </p>
                 </div>
                 <Button
@@ -170,56 +178,81 @@ export default function Page() {
       {/* Reflection Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">
-            De la Mécanique à l'Informatique
+          <h2 className="text-4xl font-bold mb-4 text-center text-balance">
+            {"De la forge à l'écran : quand les machines du XIXe préfigurent le code"}
           </h2>
           <p className="text-center text-muted-foreground mb-10 text-pretty">
-            Ce que vous étudiez avec Monsieur Darche trouve ses racines dans ces machines du XIXe siècle
+            {"Ces vieilles machines rouillées que vous voyez dans les musées ? Elles sont l'ADN de votre ordinateur."}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-8 border-2 border-accent/20">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl font-mono text-accent">01</span>
-                <h3 className="text-xl font-bold">Précision</h3>
+                <h3 className="text-xl font-bold">{"Précision : zéro tolérance"}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
-                Les instruments de Senot et le marteau-pilon de Nasmyth devaient être précis au millimètre près. Dans nos cours de BUT, nous manipulons des bits avec la même rigueur : un seul bit erroné fausse tout un calcul. La précision mécanique préfigure directement l'arithmétique binaire que nous étudions.
-              </p>
+              <div className="space-y-3 text-muted-foreground leading-relaxed">
+                <p className="text-pretty">
+                  {"Les instruments de Senot ne pardonnaient rien : 1 millimètre d'écart, et la pièce est bonne pour la ferraille. Le marteau-pilon de Nasmyth devait frapper pile au même endroit, cycle après cycle."}
+                </p>
+                <p className="text-pretty">
+                  {"Aujourd'hui ? Même combat. Un seul bit qui se trompe — un 0 qui devient 1 — et tout votre programme plante. Pas de « à peu près » en binaire. Cette obsession du millimètre est devenue l'obsession du bit : l'erreur n'est pas une option."}
+                </p>
+              </div>
             </Card>
 
             <Card className="p-8 border-2 border-accent/20">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl font-mono text-accent">02</span>
-                <h3 className="text-xl font-bold">Automatisation</h3>
+                <h3 className="text-xl font-bold">{"Automatisation : plus besoin de muscles"}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
-                Le vérin hydraulique automatise la puissance : un simple signal d'huile remplace la force humaine. En programmation, vos boucles <code className="text-accent font-mono text-sm">for</code> et <code className="text-accent font-mono text-sm">while</code> automatisent des tâches répétitives. L'automate mécanique est l'ancêtre direct de l'algorithme tel qu'on l'apprend dans nos cours de BUT.
-              </p>
+              <div className="space-y-3 text-muted-foreground leading-relaxed">
+                <p className="text-pretty">
+                  {"Le vérin hydraulique, c'était magique en 1850 : une simple pression d'huile remplaçait dix hommes à la manivelle. Signal envoyé → machine obéit. Point."}
+                </p>
+                <p className="text-pretty">
+                  {"Vos boucles "}
+                  <code className="text-accent font-mono text-sm">for</code>
+                  {" et "}
+                  <code className="text-accent font-mono text-sm">while</code>
+                  {" ? C'est exactement pareil. Au lieu de copier-coller 1000 fois la même ligne de code, vous écrivez une boucle. Signal envoyé → programme obéit. L'automate mécanique était déjà un algorithme, juste fait d'acier au lieu de silicium."}
+                </p>
+              </div>
             </Card>
 
             <Card className="p-8 border-2 border-accent/20">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl font-mono text-accent">03</span>
-                <h3 className="text-xl font-bold">Standardisation</h3>
+                <h3 className="text-xl font-bold">{"Standardisation : parler le même langage"}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
-                Le moteur Gordini utilisait des pièces standardisées interchangeables, un principe fondamental de l'ingénierie industrielle. En informatique, les normes que vous découvrez en cours — ASCII, Unicode, TCP/IP — permettent à tous les systèmes de communiquer. Sans standardisation, pas de réseaux, pas d'Internet, pas de logiciels compatibles.
-              </p>
+              <div className="space-y-3 text-muted-foreground leading-relaxed">
+                <p className="text-pretty">
+                  {"Le moteur Gordini utilisait des boulons de taille standard. Génie ! Vis cassée ? Tu la remplaces sans refabriquer toute la machine."}
+                </p>
+                <p className="text-pretty">
+                  {"Sur Internet ? Même principe. ASCII, Unicode, TCP/IP : ce sont les « boulons standard » du numérique. Sans eux, votre email Gmail ne pourrait pas parler au serveur Outlook, votre iPhone ne comprendrait pas votre PC. La standardisation, c'est ce qui fait tenir le monde connecté."}
+                </p>
+              </div>
             </Card>
 
             <Card className="p-8 border-2 border-accent/20">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl font-mono text-accent">04</span>
-                <h3 className="text-xl font-bold">Logique et répétabilité</h3>
+                <h3 className="text-xl font-bold">{"Logique & répétabilité : toujours le même geste"}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
-                Ces machines répètent exactement le même geste à chaque cycle, sans variation. C'est la définition même d'un algorithme dans nos cours de BUT : une séquence finie d'instructions qui produit toujours le même résultat pour les mêmes entrées. Le marteau-pilon suit un algorithme mécanique ; votre code suit un algorithme numérique.
-              </p>
+              <div className="space-y-3 text-muted-foreground leading-relaxed">
+                <p className="text-pretty">
+                  {"Un marteau-pilon, c'est bête : il lève le bras, il frappe, il recommence. Même mouvement, même résultat, 10 000 fois de suite sans se poser de questions."}
+                </p>
+                <p className="text-pretty">
+                  {"Un algorithme ? Pareil. Tu lui donnes les mêmes données en entrée, il te crache toujours la même sortie. Pas d'humeur, pas de fatigue, juste de la logique pure. Le marteau suivait un algorithme mécanique ; votre code suit un algorithme numérique."}
+                </p>
+              </div>
             </Card>
           </div>
           <div className="mt-8 p-6 bg-accent/10 rounded-lg border-l-4 border-l-accent">
-            <p className="text-base leading-relaxed text-pretty font-semibold text-accent">
-              Ces ingénieurs du XIXe siècle ont posé, sans le savoir, les fondements conceptuels de l'informatique. Quand nous écrivons notre premier algorithme dans nos cours de BUT, nous sommes les héritiers directs de Senot, Nasmyth et Gordini.
+            <p className="text-base leading-relaxed text-pretty text-accent">
+              <span className="font-bold">{"Finalement : "}</span>
+              {"Quand vous déboguez votre Python à 3h du matin, vous êtes dans la lignée directe de Senot qui ajustait ses instruments à la chandelle. Même rigueur, même logique, juste des outils différents. L'informatique n'est pas sortie de nulle part — elle vient de ces ateliers enfumés du XIXe siècle où on a appris, pour la première fois, à penser en précision absolue."}
             </p>
           </div>
         </div>
@@ -247,13 +280,21 @@ export default function Page() {
                 </span>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold mb-4 text-balance">Le Piano Mécanique : Une Expérience Contrastée</h3>
-                <p className="text-muted-foreground leading-relaxed text-pretty">
-                  {'Lors de notre visite au musée Arts et Métiers, nous avons découvert un magnifique piano mécanique dans la section mécanique. Safaa, fascinée par cet instrument, a voulu l\'utiliser et le voir de plus près. Malheureusement, le personnel du musée ne l\'a pas autorisée à l\'approcher ou à l\'essayer, malgré sa curiosité légitime.'}
-                </p>
-                <p className="text-muted-foreground leading-relaxed text-pretty mt-4">
-                  {'Ce qui m\'a particulièrement marqué, c\'est que quelques instants plus tard, j\'ai pu m\'approcher du même piano et même l\'examiner de près sans que personne ne me dise quoi que ce soit. Cette différence de traitement, bien que peut-être involontaire, m\'a fait réfléchir sur l\'importance de l\'égalité d\'accès à la culture et aux expériences muséales pour tous les visiteurs.'}
-                </p>
+                <h3 className="text-2xl font-bold mb-4 text-balance">{"Le Piano Mécanique : Une Scène Déconcertante"}</h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p className="text-pretty">
+                    {"Dans notre partie du musée, il y avait un piano qui ne semblait pas être un objet d'exposition — pas de cordons de sécurité, pas de panneau explicatif, rien qui indique « ne pas toucher »."}
+                  </p>
+                  <p className="text-pretty">
+                    {"Safaa s'en approche, intriguée. Immédiatement, une dame du personnel lui crie dessus, l'interdisant formellement de s'en approcher. Safaa recule, surprise et un peu gênée."}
+                  </p>
+                  <p className="text-pretty">
+                    {"Quelques minutes plus tard, Mohammed s'approche du même piano. Il va même plus loin : il essaie carrément de l'ouvrir. Personne ne dit rien. Pas un regard, pas un mot."}
+                  </p>
+                  <p className="font-semibold text-foreground">
+                    {"Même objet, même lieu, deux réactions complètement opposées."}
+                  </p>
+                </div>
               </div>
             </Card>
             
@@ -297,6 +338,42 @@ export default function Page() {
               {'Comme ces mécaniciens cherchaient à rendre leurs outils fiables et standardisés, on apprend aujourd\'hui à construire des systèmes numériques qui fonctionnent avec la même exigence. Cette visite nous montre que derrière chaque algorithme, il y a d\'abord une idée mécanique : mesurer, contrôler, automatiser.'}
             </p>
           </Card>
+        </div>
+      </section>
+
+      {/* Réflexion esthétique */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-12">
+            <Lightbulb className="w-6 h-6 text-accent" />
+            <h2 className="text-4xl font-bold">{"Réflexion : l'utile et le beau"}</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p className="text-pretty">
+                {"En parcourant la section mécanique, on a remarqué quelque chose : ces machines étaient belles. Pas juste fonctionnelles — belles. Gravures sur les cylindres, ornements en cuivre, acier bien poli. Même les pièces cachées avaient des décorations (voir photos)."}
+              </p>
+              <p className="text-pretty">
+                {"Au XIXe siècle, fabriquer une machine prenait des mois. Alors autant que ce soit beau, que l'objet montre le savoir-faire de celui qui l'a créé."}
+              </p>
+              <p className="text-pretty">
+                {"Aujourd'hui ? On fait le minimum. Un boîtier gris, des câbles, tant que ça marche c'est bon. Nos ordinateurs sont mille fois plus puissants, mais ils n'ont aucune âme."}
+              </p>
+              <p className="text-pretty font-semibold text-foreground">
+                {"On a peut-être perdu quelque chose : l'idée qu'un objet peut être utile ET beau en même temps. Les ingénieurs du XIXe le savaient. Nous, on l'a oublié."}
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden relative">
+              <img
+                src="/images/serure.jpg"
+                alt="Serrure ornementée du musée Arts et Métiers"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <span className="absolute bottom-3 right-3 text-xs text-muted-foreground/70 bg-background/80 px-3 py-1.5 rounded">
+                Serrure à combinaison, 1786 — Musée Arts et Métiers
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
