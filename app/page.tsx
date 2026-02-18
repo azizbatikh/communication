@@ -183,7 +183,7 @@ export default function Page() {
                 <h3 className="text-xl font-bold">Précision</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                Les instruments de Senot et le marteau-pilon de Nasmyth devaient être précis au millimètre près. En cours d'informatique avec M. Darche, vous manipulez des bits avec la même rigueur : un seul bit erroné fausse tout un calcul. La précision mécanique préfigure directement l'arithmétique binaire que vous apprenez.
+                Les instruments de Senot et le marteau-pilon de Nasmyth devaient être précis au millimètre près. Dans nos cours de BUT, nous manipulons des bits avec la même rigueur : un seul bit erroné fausse tout un calcul. La précision mécanique préfigure directement l'arithmétique binaire que nous étudions.
               </p>
             </Card>
 
@@ -193,7 +193,7 @@ export default function Page() {
                 <h3 className="text-xl font-bold">Automatisation</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                Le vérin hydraulique automatise la puissance : un simple signal d'huile remplace la force humaine. En programmation, vos boucles <code className="text-accent font-mono text-sm">for</code> et <code className="text-accent font-mono text-sm">while</code> automatisent des tâches répétitives. L'automate mécanique est l'ancêtre direct de l'algorithme tel que M. Darche vous l'enseigne.
+                Le vérin hydraulique automatise la puissance : un simple signal d'huile remplace la force humaine. En programmation, vos boucles <code className="text-accent font-mono text-sm">for</code> et <code className="text-accent font-mono text-sm">while</code> automatisent des tâches répétitives. L'automate mécanique est l'ancêtre direct de l'algorithme tel qu'on l'apprend dans nos cours de BUT.
               </p>
             </Card>
 
@@ -213,13 +213,13 @@ export default function Page() {
                 <h3 className="text-xl font-bold">Logique et répétabilité</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                Ces machines répètent exactement le même geste à chaque cycle, sans variation. C'est la définition même d'un algorithme selon M. Darche : une séquence finie d'instructions qui produit toujours le même résultat pour les mêmes entrées. Le marteau-pilon suit un algorithme mécanique ; votre code suit un algorithme numérique.
+                Ces machines répètent exactement le même geste à chaque cycle, sans variation. C'est la définition même d'un algorithme dans nos cours de BUT : une séquence finie d'instructions qui produit toujours le même résultat pour les mêmes entrées. Le marteau-pilon suit un algorithme mécanique ; votre code suit un algorithme numérique.
               </p>
             </Card>
           </div>
           <div className="mt-8 p-6 bg-accent/10 rounded-lg border-l-4 border-l-accent">
             <p className="text-base leading-relaxed text-pretty font-semibold text-accent">
-              Ces ingénieurs du XIXe siècle ont posé, sans le savoir, les fondements conceptuels de l'informatique. Quand vous écrivez votre premier algorithme en cours avec M. Darche, vous êtes les héritiers directs de Senot, Nasmyth et Gordini.
+              Ces ingénieurs du XIXe siècle ont posé, sans le savoir, les fondements conceptuels de l'informatique. Quand nous écrivons notre premier algorithme dans nos cours de BUT, nous sommes les héritiers directs de Senot, Nasmyth et Gordini.
             </p>
           </div>
         </div>
@@ -291,7 +291,7 @@ export default function Page() {
           </h2>
           <Card className="p-12 bg-primary text-primary-foreground border-0">
             <p className="text-lg leading-relaxed mb-6 text-pretty">
-              {'En visitant ces machines, on a réalisé que l\'informatique n\'est pas née d\'un coup : elle prolonge une longue histoire de précision et d\'automatisation. Les instruments de Senot, conçus pour tailler des vis avec une exactitude remarquable, nous rappellent directement les notions vues en première année avec Monsieur Darche : logique, rigueur, répétabilité.'}
+              {'En visitant ces machines, on a réalisé que l\'informatique n\'est pas née d\'un coup : elle prolonge une longue histoire de précision et d\'automatisation. Les instruments de Senot, conçus pour tailler des vis avec une exactitude remarquable, nous rappellent directement les notions vues dans nos cours de BUT : logique, rigueur, répétabilité.'}
             </p>
             <p className="text-lg leading-relaxed font-semibold text-pretty">
               {'Comme ces mécaniciens cherchaient à rendre leurs outils fiables et standardisés, on apprend aujourd\'hui à construire des systèmes numériques qui fonctionnent avec la même exigence. Cette visite nous montre que derrière chaque algorithme, il y a d\'abord une idée mécanique : mesurer, contrôler, automatiser.'}
