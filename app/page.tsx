@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Cog, Wrench, Lightbulb, ChevronRight, X } from 'lucide-react'
-import MuseumRunnerGame from '@/components/museum-runner-game'
+import QCMGame from '@/components/qcm-game'
 
 export default function Page() {
   const [selectedObject, setSelectedObject] = useState<string | null>(null)
@@ -125,32 +125,32 @@ export default function Page() {
           <Card className="p-12 md:p-16 border-2">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-4xl font-bold mb-4">Blaise Pascal</h3>
-                <p className="text-lg text-accent mb-6 font-mono">1623 - 1662</p>
+                <h3 className="text-4xl font-bold mb-4">Senot</h3>
+                <p className="text-lg text-accent mb-6 font-mono">XIXe siècle</p>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p className="text-pretty">
-                    {'Mathématicien, physicien et inventeur français de génie, Blaise Pascal révolutionne le calcul mécanique en inventant la Pascaline en 1642, à l\'âge de seulement 19 ans. Cette première machine à calculer permettait d\'effectuer des additions et soustractions grâce à un système d\'engrenages et de roues dentées.'}
+                    {'Ingénieur mécanicien français du XIXe siècle, Senot s\'illustre par ses travaux pionniers en mécanique de précision. Ses instruments de mesure, d\'une exactitude remarquable pour l\'époque, révolutionnent le contrôle qualité dans l\'industrie naissante et permettent la fabrication de pièces rigoureusement standardisées.'}
                   </p>
                   <p className="text-pretty">
-                    {'Pascal conçut cette machine pour aider son père, collecteur d\'impôts, dans ses calculs fastidieux. Il en construisit une cinquantaine d\'exemplaires, mais la complexité et le coût élevé limitèrent son succès commercial. Néanmoins, cette invention posa les bases de toutes les machines à calculer futures.'}
+                    {'Ses contributions s\'inscrivent dans un moment charnière où la précision mécanique devient une exigence industrielle. Les outils de Senot permettent de vérifier, comparer et garantir des cotes identiques d\'une pièce à l\'autre — posant ainsi le principe de l\'interchangeabilité des composants.'}
                   </p>
                   <p className="text-pretty">
-                    {'Le mécanisme de report automatique de la Pascaline, qui gère les retenues entre les ordres décimaux, est identique au fonctionnement des ALU (Arithmetic Logic Units) dans nos processeurs modernes. Pascal a créé sans le savoir l\'ancêtre mécanique de l\'informatique.'}
+                    {'Ce souci de la précision mesurable préfigure directement la logique binaire : en informatique, chaque bit doit être exact — un 0 ne peut pas être "presque" un 1. Senot, sans le savoir, a contribué à établir la culture de la rigueur absolue qui fonde toute l\'informatique moderne.'}
                   </p>
                 </div>
-                <Button 
+                <Button
                   onClick={() => setSelectedInventor(true)}
                   className="mt-8"
                 >
-                  {'En savoir plus sur Pascal'}
+                  {'En savoir plus sur Senot'}
                 </Button>
               </div>
               <div className="bg-gradient-to-br from-secondary to-muted rounded-lg overflow-hidden relative">
-                {/* Photo placeholder for Pascal portrait */}
+                {/* Photo placeholder for Senot portrait */}
                 <div className="aspect-[3/4] flex items-center justify-center relative">
-                  <img 
+                  <img
                     src="/images/blaisepascal.webp"
-                    alt="Blaise Pascal"
+                    alt="Senot"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
@@ -159,7 +159,7 @@ export default function Page() {
                   <Lightbulb className="w-32 h-32 text-accent opacity-30 absolute" />
                 </div>
                 <span className="absolute bottom-4 right-4 text-xs text-muted-foreground/60 bg-background/80 px-3 py-1.5 rounded">
-                  {'Portrait de Blaise Pascal'}
+                  {'tour à vis de sénot'}
                 </span>
               </div>
             </div>
@@ -170,18 +170,58 @@ export default function Page() {
       {/* Reflection Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center">Réflexion : Du Mécanique au Numérique</h2>
-          <Card className="p-12 border-2 border-accent/20">
-            <p className="text-lg leading-relaxed mb-6 text-pretty">
-              {'Le métier Jacquard et ses cartes perforées, la Pascaline et son mécanisme de calcul, l\'horloge marine de Berthoud et sa précision : ces objets posent une question fascinante sur notre époque actuelle : **l\'intelligence artificielle n\'est-elle pas la continuation de cette quête d\'automatisation ?**'}
+          <h2 className="text-4xl font-bold mb-4 text-center">
+            De la Mécanique à l'Informatique
+          </h2>
+          <p className="text-center text-muted-foreground mb-10 text-pretty">
+            Ce que vous étudiez avec Monsieur Darche trouve ses racines dans ces machines du XIXe siècle
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-8 border-2 border-accent/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl font-mono text-accent">01</span>
+                <h3 className="text-xl font-bold">Précision</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed text-pretty">
+                Les instruments de Senot et le marteau-pilon de Nasmyth devaient être précis au millimètre près. En cours d'informatique avec M. Darche, vous manipulez des bits avec la même rigueur : un seul bit erroné fausse tout un calcul. La précision mécanique préfigure directement l'arithmétique binaire que vous apprenez.
+              </p>
+            </Card>
+
+            <Card className="p-8 border-2 border-accent/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl font-mono text-accent">02</span>
+                <h3 className="text-xl font-bold">Automatisation</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed text-pretty">
+                Le vérin hydraulique automatise la puissance : un simple signal d'huile remplace la force humaine. En programmation, vos boucles <code className="text-accent font-mono text-sm">for</code> et <code className="text-accent font-mono text-sm">while</code> automatisent des tâches répétitives. L'automate mécanique est l'ancêtre direct de l'algorithme tel que M. Darche vous l'enseigne.
+              </p>
+            </Card>
+
+            <Card className="p-8 border-2 border-accent/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl font-mono text-accent">03</span>
+                <h3 className="text-xl font-bold">Standardisation</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed text-pretty">
+                Le moteur Gordini utilisait des pièces standardisées interchangeables, un principe fondamental de l'ingénierie industrielle. En informatique, les normes que vous découvrez en cours — ASCII, Unicode, TCP/IP — permettent à tous les systèmes de communiquer. Sans standardisation, pas de réseaux, pas d'Internet, pas de logiciels compatibles.
+              </p>
+            </Card>
+
+            <Card className="p-8 border-2 border-accent/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl font-mono text-accent">04</span>
+                <h3 className="text-xl font-bold">Logique et répétabilité</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed text-pretty">
+                Ces machines répètent exactement le même geste à chaque cycle, sans variation. C'est la définition même d'un algorithme selon M. Darche : une séquence finie d'instructions qui produit toujours le même résultat pour les mêmes entrées. Le marteau-pilon suit un algorithme mécanique ; votre code suit un algorithme numérique.
+              </p>
+            </Card>
+          </div>
+          <div className="mt-8 p-6 bg-accent/10 rounded-lg border-l-4 border-l-accent">
+            <p className="text-base leading-relaxed text-pretty font-semibold text-accent">
+              Ces ingénieurs du XIXe siècle ont posé, sans le savoir, les fondements conceptuels de l'informatique. Quand vous écrivez votre premier algorithme en cours avec M. Darche, vous êtes les héritiers directs de Senot, Nasmyth et Gordini.
             </p>
-            <p className="text-lg leading-relaxed mb-6 text-pretty">
-              {'En 1642, Pascal automatise le calcul avec des engrenages. En 1801, Jacquard programme des motifs textiles complexes via des cartes perforées. En 2026, nous "programmons" des modèles d\'IA via des datasets. Dans tous les cas, nous encodons des patterns pour automatiser des tâches jadis réservées aux humains.'}
-            </p>
-            <p className="text-lg leading-relaxed text-pretty font-semibold text-accent">
-              {'La question éthique demeure : jusqu\'où déléguer notre créativité et notre intelligence à la machine ? La Pascaline a libéré les comptables de calculs fastidieux, le métier Jacquard a transformé le tissage, et l\'horloge marine a révolutionné la navigation. L\'IA générative suit-elle le même chemin pour les créateurs d\'aujourd\'hui ?'}
-            </p>
-          </Card>
+          </div>
         </div>
       </section>
 
@@ -251,32 +291,26 @@ export default function Page() {
           </h2>
           <Card className="p-12 bg-primary text-primary-foreground border-0">
             <p className="text-lg leading-relaxed mb-6 text-pretty">
-              {'En tant qu\'informaticien, cette visite a été une révélation : **chaque ligne de code que j\'écris descend directement de ces mécanismes**.'}
-            </p>
-            <p className="text-lg leading-relaxed mb-6 text-pretty">
-              {'La Pascaline m\'a fait réaliser que les ALU (Arithmetic Logic Units) de nos processeurs modernes utilisent exactement les mêmes principes de report de retenue que Pascal a inventés en 1642. Les cartes perforées du métier Jacquard sont les ancêtres directs de la mémoire ROM - un programme figé dans la matière. L\'horloge marine de Berthoud préfigure les systèmes de synchronisation distribués de nos réseaux informatiques.'}
-            </p>
-            <p className="text-lg leading-relaxed mb-6 text-pretty">
-              {'Ces objets me rappellent que l\'informatique n\'est pas une discipline abstraite : elle est ancrée dans la physique, la mécanique, et l\'ingéniosité humaine. Quand je débogue un algorithme, je suis l\'héritier de Pascal cherchant à perfectionner ses engrenages. Quand j\'écris un programme, je suis l\'héritier de Jacquard perforant ses cartes.'}
+              {'En visitant ces machines, on a réalisé que l\'informatique n\'est pas née d\'un coup : elle prolonge une longue histoire de précision et d\'automatisation. Les instruments de Senot, conçus pour tailler des vis avec une exactitude remarquable, nous rappellent directement les notions vues en première année avec Monsieur Darche : logique, rigueur, répétabilité.'}
             </p>
             <p className="text-lg leading-relaxed font-semibold text-pretty">
-              {'Mon défi en tant que développeur : créer des systèmes qui, comme ces machines, traverseront les siècles par leur élégance conceptuelle et leur utilité universelle.'}
+              {'Comme ces mécaniciens cherchaient à rendre leurs outils fiables et standardisés, on apprend aujourd\'hui à construire des systèmes numériques qui fonctionnent avec la même exigence. Cette visite nous montre que derrière chaque algorithme, il y a d\'abord une idée mécanique : mesurer, contrôler, automatiser.'}
             </p>
           </Card>
         </div>
       </section>
 
-      {/* Game Section */}
+      {/* QCM Game Section */}
       <section className="py-20 px-6 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-4 justify-center">
             <Cog className="w-6 h-6 text-accent animate-spin-slow" />
-            <h2 className="text-4xl font-bold text-center">Museum Runner</h2>
+            <h2 className="text-4xl font-bold text-center">Quiz Mécanique</h2>
           </div>
           <p className="text-center text-muted-foreground mb-10 text-pretty">
-            {'Courez dans les rues du musée, sautez par-dessus les obstacles et collectez les engrenages !'}
+            Testez vos connaissances sur les objets du Musée des Arts et Métiers — 7 questions pour devenir expert(e) !
           </p>
-          <MuseumRunnerGame />
+          <QCMGame />
         </div>
       </section>
 
@@ -372,28 +406,28 @@ export default function Page() {
               <X className="w-5 h-5" />
             </Button>
             
-            <h3 className="text-4xl font-bold mb-4">Blaise Pascal - Pionnier du Calcul Mécanique</h3>
-            <p className="text-lg text-accent mb-8 font-mono">1623 - 1662</p>
-            
+            <h3 className="text-4xl font-bold mb-4">Senot — Pionnier de la Mécanique de Précision</h3>
+            <p className="text-lg text-accent mb-8 font-mono">XIXe siècle</p>
+
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <div>
-                <h4 className="font-bold text-foreground mb-2">La Pascaline : Une Innovation Révolutionnaire</h4>
+                <h4 className="font-bold text-foreground mb-2">Des Instruments d'une Précision Remarquable</h4>
                 <p className="text-pretty">
-                  {'En 1642, à l\'âge de seulement 19 ans, Pascal invente la première machine à calculer mécanique de l\'histoire. Il conçoit cette machine pour aider son père, collecteur d\'impôts à Rouen, dans ses calculs fastidieux. La Pascaline permettait d\'effectuer des additions et soustractions grâce à un système d\'engrenages et de roues dentées.'}
+                  {'Senot est un ingénieur mécanicien français du XIXe siècle dont les travaux sur les instruments de mesure de précision ont profondément influencé l\'industrie naissante. Ses instruments permettaient de vérifier et garantir des cotes identiques d\'une pièce à l\'autre, ouvrant la voie à la fabrication en série et à l\'interchangeabilité des composants mécaniques.'}
                 </p>
               </div>
-              
+
               <div>
-                <h4 className="font-bold text-foreground mb-2">Un Mécanisme de Génie</h4>
+                <h4 className="font-bold text-foreground mb-2">La Rigueur au Cœur de l'Innovation</h4>
                 <p className="text-pretty">
-                  {'Le mécanisme de report automatique de la Pascaline est d\'une ingéniosité remarquable. Chaque roue représente un ordre décimal (unités, dizaines, centaines...), et lorsqu\'une roue passe de 9 à 0, elle déclenche automatiquement l\'incrémentation de la roue suivante. Ce système de retenue mécanique fonctionne exactement comme les opérations arithmétiques dans nos processeurs modernes.'}
+                  {'Le travail de Senot s\'inscrit dans un contexte où la précision de mesure devient un enjeu industriel majeur. Là où l\'artisan réglait ses pièces à l\'œil, Senot impose des outils capables de quantifier l\'écart avec une précision qu\'aucun sens humain ne peut atteindre. Cette exigence de mesure exacte transforme la fabrication mécanique en discipline scientifique.'}
                 </p>
               </div>
-              
+
               <div>
-                <h4 className="font-bold text-foreground mb-2">Héritage et Modernité</h4>
+                <h4 className="font-bold text-foreground mb-2">Un Héritage au Cœur de l'Informatique</h4>
                 <p className="text-pretty">
-                  {'Pascal construisit une cinquantaine d\'exemplaires de sa machine, mais la complexité et le coût élevé limitèrent son succès commercial. Néanmoins, cette invention posa les bases de toutes les machines à calculer futures, des arithmomètres aux ordinateurs modernes. Les ALU (Arithmetic Logic Units) de nos processeurs utilisent exactement les mêmes principes de report de retenue que la Pascaline.'}
+                  {'Les principes établis par Senot — mesure rigoureuse, reproductibilité, tolérance zéro à l\'erreur — sont les mêmes que ceux qui gouvernent l\'informatique moderne. Un processeur manipule des milliards de bits par seconde en garantissant qu\'aucun ne soit ambigu. La culture de la précision absolue, inaugurée par des ingénieurs comme Senot, est le fondement invisible de tout système numérique.'}
                 </p>
               </div>
             </div>
